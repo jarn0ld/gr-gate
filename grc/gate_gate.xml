@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<block>
+  <name>gate</name>
+  <key>gate_gate</key>
+  <category>[gate]</category>
+  <import>import gate</import>
+  <make>gate.gate()</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>ch0</name>
+    <type>complex</type>
+  </sink>
+  <sink>
+    <name>ch1</name>
+    <type>complex</type>
+  </sink>
+  <sink>
+    <name>trigger</name>
+    <type>byte</type>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>ch0</name>
+    <type>complex</type>
+  </source>
+  <source>
+    <name>ch1</name>
+    <type>complex</type>
+  </source>
+</block>
